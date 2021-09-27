@@ -1,0 +1,44 @@
+\documentclass[10pt,hideothersubsections,aspectratio=1610]{beamer}
+
+% The Makefile prepends \def\theLecture{<number>} where <number> is depending on
+% the make target. If this macro is not yet defined, this line will make sure
+% that the compiler doesn't crash (at least not for a missing \theLecture
+% macro).
+\providecommand*\theLecture{0}
+
+% To speed up compilation, you can use this switch to selectively include
+% packages and package settings for specific lectures. If \theLecture is 0, all
+% lectures will be included.
+\ifcase\theLecture  % Lecture 0, so all lectures
+  \usepackage[code-printing,tikz-styles,pgfplots-styles]{lecture}
+\or                 % Lecture 1 specifics
+  \usepackage[code-printing]{lecture}
+  \usepackage{qrcode} % As example, not actually used
+\fi
+
+\input{lectures.revision.tex}
+
+% These settings can be overwritten per lecture, using the optional first
+% argument of the \lecture command. See lectures/lecture-1.tex for an example.
+\course[course code]{course name}
+\title{main title of all slides file}
+\author[short author]{long author}
+\institute{Saxion University of Applied Sciences}
+% The commands \lecturesrevisiondate and \lecturesrevision are taken from the
+% file lectures.revision.tex, which by default is gitignored. Use
+% 'make revision-file' or 'make all' to generate it.
+\date{\lecturesrevisiondate~(\lecturesrevision)}
+
+\begin{document}
+  % Only add titlepage if all lectures are to be compiled.
+  \ifnum\theLecture=0
+    \titlepage
+  \fi
+  \includelecture{1}
+  % \includelecture{2}
+  % \includelecture{3}
+  % \includelecture{4}
+  % \includelecture{5}
+  % \includelecture{6}
+  % \includelecture{7}
+\end{document}
