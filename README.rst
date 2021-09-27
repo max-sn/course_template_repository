@@ -22,14 +22,14 @@ Requirements
 Examples
 --------
 
-.. figure:: ./course_materials/figures/example-slides.svg
+.. figure:: ./course_materials/figures/example-slides.gif
   :alt: Example slideshow slides
   :figwidth: 70%
   :align: center
   
   Example of using ``make lectures-slides``.
 
-.. figure:: ./course_materials/figures/example-handout.svg
+.. figure:: ./course_materials/figures/example-handout.gif
   :alt: Example slideshow handout
   :figwidth: 70%
   :align: center
