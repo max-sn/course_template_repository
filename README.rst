@@ -13,7 +13,7 @@ Getting started
 Requirements
 ------------
 
-* A recente tex-live or Miktex installation
+* A recent tex-live or Miktex installation
 * git
 * The Auto 1 font, provided by Saxion.
   
