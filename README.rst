@@ -1,6 +1,42 @@
 Course template repository
 ==========================
 
+Getting started
+---------------
+
+1. Click the big ``Use this template`` button.
+2. Enter a name, and clone the repository to a local directory.
+3. Enter this repository using the terminal and run ``git submodule update --init``.
+4. Change the example files to your liking and compile using the Makefile
+
+
+Requirements
+------------
+
+* A recente tex-live or Miktex installation
+* git
+* The Auto 1 font, provided by Saxion.
+  
+  * You can change the font manually in ``lecture.sty`` if you don't have or don't want to use the Auto 1 font. Look for the heading 'Fonts' and replace all occurrences of ``Auto 1`` with another font installed on your system.
+
+Examples
+--------
+
+.. figure:: ./course_materials/figures/example-slides.svg
+  :alt: Example slideshow slides
+  :figwidth: 70%
+  :align: center
+  
+  Example of using ``make lectures-slides``.
+
+.. figure:: ./course_materials/figures/example-handout.svg
+  :alt: Example slideshow handout
+  :figwidth: 70%
+  :align: center
+  
+  Example of using ``make lectures-slides``.
+
+
 Adding a lecture
 ----------------
 
